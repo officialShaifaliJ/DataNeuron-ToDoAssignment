@@ -2,7 +2,7 @@
 
 ## Features
 
-* :&#x1F680;: Resizable Box and Adjustable grid
+* &#x1F680; Resizable Box and Adjustable grid
 
 * :white_check_mark: Grid Pattern
 
