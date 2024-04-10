@@ -58,7 +58,7 @@ function Todo() {
   const layout = [
     { i: "a", x: 0, y: 0, w: 4, h: 1 },
     { i: "b", x: 5, y: 0, w: 8, h: 1 },
-    { i: "c", x: 0, y: 1, w: 12, h: 1 },
+    { i: "c", x: 0, y: 1, w: 12, h: 1.5 },
     // { i: 'd', x: 1, y: 1, w: 1, h: 1 }
   ];
   useEffect(() => {
@@ -72,11 +72,15 @@ function Todo() {
         autoSize={true}
         cols={12}
         rowHeight={300}
-        
         style={{ width: "auto", height: "auto" }}
       >
         <div
-          style={{ border: "2px solid lightgrey", width: "auto", height: "auto", overflow: "auto" }}
+          style={{
+            border: "2px solid lightgrey",
+            width: "auto",
+            height: "auto",
+            overflow: "auto",
+          }}
           key="a"
           data-grid={layout[0]}
           resizeHandles={["s", "e", "n", "w", "se", "sw", "ne", "nw"]}
@@ -84,7 +88,12 @@ function Todo() {
           <Heading>TO-DO LIST</Heading>
         </div>
         <div
-          style={{ border: "2px solid lightgrey", width: "auto", height: "auto", overflow: "auto" }}
+          style={{
+            border: "2px solid lightgrey",
+            width: "auto",
+            height: "auto",
+            overflow: "auto",
+          }}
           key="b"
           data-grid={layout[1]}
           resizeHandles={["s", "e", "n", "w", "se", "sw", "ne", "nw"]}
@@ -121,34 +130,31 @@ function Todo() {
           </FormControl>
         </div>
         <div
-          style={{ border: "2px solid lightgrey"}}
+          style={{ border: "2px solid lightgrey" }}
           key="c"
           data-grid={layout[2]}
           resizeHandles={["s", "e", "n", "w", "se", "sw", "ne", "nw"]}
         >
           <Heading>TO-DO LIST</Heading>
 
-          <Box  h='80%' w='auto' overflow='auto'>
-          <OrderedList>
-            {todos.map((e) => {
-              return (
-                <ListItem
-                  border="2px solid lightgrey"
-                  borderRadius="10px"
-                  m="3"
-                  p="3"
-                >
-                  <UpdateTodo key={e._id} todo={e} fetchData={fetchData} />
-                </ListItem>
-              );
-            })}
-          </OrderedList>
-          </Box>
-
+            <OrderedList>
+              {todos.map((e) => {
+                return (
+                  <ListItem
+                    border="2px solid lightgrey"
+                    borderRadius="10px"
+                    m="3"
+                    p="3"
+                  >
+                    <UpdateTodo key={e._id} todo={e} fetchData={fetchData} />
+                  </ListItem>
+                );
+              })}
+            </OrderedList>
         </div>
       </ResponsiveGridLayout>
 
-
+{/* grid with out resizing modal */}
       {/* <Grid
         h="100%"
         templateRows="repeat(2, 1fr)"
