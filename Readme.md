@@ -1,6 +1,9 @@
-# Assignment 1 Data Neuron 
+# Assignment 1 Data Neuron
 
-## Resizable Box 
-## Grid Pattern
-## Todo Api using mongodb =>  done
-## Create,Update,Read,Delete => done
+## Resizable Box and Adjustable grid
+
+## `:Greencheck:` Grid Pattern
+
+## `:Greencheck:`Todo Api using mongodb
+
+## `:check_mark_button:` Create,Update,Read,Delete
