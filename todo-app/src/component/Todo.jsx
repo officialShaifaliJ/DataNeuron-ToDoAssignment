@@ -57,8 +57,8 @@ function Todo() {
   };
   const layout = [
     { i: "a", x: 0, y: 0, w: 4, h: 1 },
-    { i: "b", x: 5, y: 0, w: 6, h: 1 },
-    { i: "c", x: 0, y: 1, w: 10, h: 1 },
+    { i: "b", x: 5, y: 0, w: 8, h: 1 },
+    { i: "c", x: 0, y: 1, w: 12, h: 1 },
     // { i: 'd', x: 1, y: 1, w: 1, h: 1 }
   ];
   useEffect(() => {
@@ -70,9 +70,10 @@ function Todo() {
       <ResponsiveGridLayout
         className="layout"
         autoSize={true}
-        cols={10}
+        cols={12}
         rowHeight={300}
-        style={{ width: "100%", height: "100%" }}
+        
+        style={{ width: "auto", height: "auto" }}
       >
         <div
           style={{ border: "2px solid lightgrey", width: "auto", height: "auto", overflow: "auto" }}
