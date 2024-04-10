@@ -2,8 +2,8 @@
 
 ## Resizable Box and Adjustable grid
 
-## `:Greencheck:` Grid Pattern
+## :Greencheck: Grid Pattern
 
-## `:Greencheck:`Todo Api using mongodb
+## :Greencheck: Todo Api using mongodb
 
-## `:check_mark_button:` Create,Update,Read,Delete
+## :check_mark_button: Create ,Update ,Read ,Delete functionality
