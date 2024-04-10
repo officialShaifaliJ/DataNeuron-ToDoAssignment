@@ -38,10 +38,10 @@ app.post('/createtodo', async (req, res) => {
 app.patch('/updatetodo/:todoid', async (req, res) => {
     const {todoid} = req.params;
     const payload = req.body;
-
+console.log(req.body,'REQUEST<*******************************************>BODY')
     try {
-      await TodoModel.findByIdAndUpdate({id:todoid},payload)
-      res.status(200).send({"message":"The todo has been updated succesfully"})
+      const todo = await TodoModel.findByIdAndUpdate({_id:todoid},payload,{ new: true });
+      res.status(200).send({"message":`The todo has been updated succesfully${todo}`})
     } catch (error) {
       res.status(400).send({"message from patch request":error});
     }
@@ -53,7 +53,7 @@ app.delete('/deletetodo/:todoid', async (req, res) => {
     const {todoid} = req.params;
 
     try {
-      await TodoModel.findByIdAndDelete({id:todoid})
+      await TodoModel.findByIdAndDelete({_id:todoid},{ new: true })
       res.status(200).send({"message":"The todo has been deleted succesfully"})
     } catch (error) {
       res.status(400).send({"message from delete request":error});
