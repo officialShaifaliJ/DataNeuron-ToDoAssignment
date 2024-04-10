@@ -137,89 +137,6 @@ function Todo() {
         >
           <Heading>TO-DO LIST</Heading>
 
-            <OrderedList>
-              {todos.map((e) => {
-                return (
-                  <ListItem
-                    border="2px solid lightgrey"
-                    borderRadius="10px"
-                    m="3"
-                    p="3"
-                  >
-                    <UpdateTodo key={e._id} todo={e} fetchData={fetchData} />
-                  </ListItem>
-                );
-              })}
-            </OrderedList>
-        </div>
-      </ResponsiveGridLayout>
-
-{/* grid with out resizing modal */}
-      {/* <Grid
-        h="100%"
-        templateRows="repeat(2, 1fr)"
-        templateColumns="repeat(3, 1fr)"
-        gap={4}
-        margin={4}
-      >
-        <GridItem
-          border="2px solid lightgrey"
-          bgColor="#F0FFF4"
-          borderRadius="10"
-          // w={position}
-        >
-          <Heading>TO-DO LIST</Heading>
-        </GridItem>
-        <GridItem
-          rowSpan={1}
-          colSpan={2}
-          border="2px solid lightgrey"
-          p="4"
-          bgColor="#FAF5FF"
-          borderRadius="10"
-        >
-          <Heading> ADD YOUR TODO HERE -</Heading>
-
-          <FormControl>
-            <FormLabel>Title :</FormLabel>
-            <Input
-              type="text"
-              value={title}
-              onChange={(e) => {
-                setTitle(e.target.value);
-              }}
-              placeholder="title"
-            />
-            <FormLabel>Description :</FormLabel>
-            <Input
-              type="text"
-              value={description}
-              onChange={(e) => {
-                setDescription(e.target.value);
-              }}
-              placeholder="description"
-            />
-            <Button
-              type="submit"
-              m="4"
-              colorScheme="cyan"
-              onClick={handleSubmit}
-            >
-              Add Todo
-            </Button>
-          </FormControl>
-        </GridItem>
-
-        <GridItem
-          rowSpan="1"
-          colSpan="3"
-          border="2px solid lightgrey"
-          p="4"
-          bgColor="#FFF5F5"
-          borderRadius="10"
-        >
-          <Heading>TO-DO LIST</Heading>
-
           <OrderedList>
             {todos.map((e) => {
               return (
@@ -234,8 +151,102 @@ function Todo() {
               );
             })}
           </OrderedList>
-        </GridItem>
-      </Grid> */}
+        </div>
+      </ResponsiveGridLayout>
+
+      {/* grid with out resizing modal */}
+
+      {/* <Box
+        className="withoutResizing"
+        position="relative"
+        top="0"
+        left="0"
+        width="100%"
+        height="100%"
+        zIndex="-1"
+      >
+        <Grid
+          h="100%"
+          templateRows="repeat(2, 1fr)"
+          templateColumns="repeat(3, 1fr)"
+          gap={4}
+          margin={4}
+        >
+          <GridItem
+            border="2px solid lightgrey"
+            bgColor="#F0FFF4"
+            borderRadius="10"
+            // w={position}
+          >
+            <Heading>TO-DO LIST</Heading>
+          </GridItem>
+          <GridItem
+            rowSpan={1}
+            colSpan={2}
+            border="2px solid lightgrey"
+            p="4"
+            bgColor="#FAF5FF"
+            borderRadius="10"
+          >
+            <Heading> ADD YOUR TODO HERE -</Heading>
+
+            <FormControl>
+              <FormLabel>Title :</FormLabel>
+              <Input
+                type="text"
+                value={title}
+                onChange={(e) => {
+                  setTitle(e.target.value);
+                }}
+                placeholder="title"
+              />
+              <FormLabel>Description :</FormLabel>
+              <Input
+                type="text"
+                value={description}
+                onChange={(e) => {
+                  setDescription(e.target.value);
+                }}
+                placeholder="description"
+              />
+              <Button
+                type="submit"
+                m="4"
+                colorScheme="cyan"
+                onClick={handleSubmit}
+              >
+                Add Todo
+              </Button>
+            </FormControl>
+          </GridItem>
+
+          <GridItem
+            rowSpan="1"
+            colSpan="3"
+            border="2px solid lightgrey"
+            p="4"
+            bgColor="#FFF5F5"
+            borderRadius="10"
+          >
+            <Heading>TO-DO LIST</Heading>
+
+            <OrderedList>
+              {todos.map((e) => {
+                return (
+                  <ListItem
+                    border="2px solid lightgrey"
+                    borderRadius="10px"
+                    m="3"
+                    p="3"
+                  >
+                    <UpdateTodo key={e._id} todo={e} fetchData={fetchData} />
+                  </ListItem>
+                );
+              })}
+            </OrderedList>
+          </GridItem>
+        </Grid>
+      </Box> */}
     </>
   );
 }
