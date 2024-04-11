@@ -2,7 +2,7 @@
 
 ### Overview
 
-This Todo application is a simple task management tool built with React.js and Chakra UI. It allows users to add, update, mark as completed, and delete tasks. The application uses a resizable layout for a better user experience.
+This Todo application is a simple task management tool built with React.js and Mongodb. It allows users to add, update, mark as completed, and delete tasks. The application uses a resizable layout for a better user experience.
 
 ### Features
 
